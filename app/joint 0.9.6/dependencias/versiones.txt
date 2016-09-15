@@ -1,0 +1,7 @@
+dependencias para joint 0.9.6
+
+JQuery: 2.0.3
+Loadsh: 3.10.1
+Backbone: 1.2.1
+
+link: http://www.jointjs.com/download

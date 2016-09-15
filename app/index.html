@@ -6,25 +6,28 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>My AngularJS App</title>
+	<title>NovaMap+</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<link href="bower_components/angular-material-data-table/dist/md-data-table.min.css" rel="stylesheet" type="text/css"/>
 	<link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
 	<link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">
 	<link rel="stylesheet" href="bower_components/angular-material/angular-material.css">
+	
 	<link rel="stylesheet" href="app.css">
+	<link rel="stylesheet" type="text/css" href="joint_0.9.6/joint.css" />
 	<script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
 <header>
 	<div >
 		<md-toolbar>
-			<div class="md-toolbar-tools">
-				
+			<div class="md-toolbar-tools">				
 				<h2>
 					<span>NovaMap+</span>
 				</h2>
 				<span flex></span>
-				<md-button >
+				<md-button aria-label="nmvp-settings">
 					<md-icon md-svg-icon="img/icons/other-icons/ic_settings_black_48px.svg"></md-icon>
 				</md-button>
 			</div>
@@ -46,6 +49,9 @@
 	    </div>
     </div>
 
+
+
+
 	
 	<!--<a  ui-sref="home" >home</a>-->
 
@@ -66,8 +72,23 @@
 	<script src="components/version/version.js"></script>
 	<script src="components/version/version-directive.js"></script>
 	<script src="components/version/interpolate-filter.js"></script>
-</body>
+	<!--<script type="text/javascript" src="bower_components/angular-material-data-table/dist/md-data-table.min.js"></script>-->
+	<script src="bower_components/angular-material-data-table/dist/md-data-table.min.js"></script>
+	<script type="text/javascript" src="joint_0.9.6/dependencias/jquery.min.js"></script>
+	<script type="text/javascript" src="joint_0.9.6/dependencias/lodash.min.js"></script>
+	
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.2.1/backbone-min.js"></script>
+	<!--<script type="text/javascript" src="joint_0.9.6/dependencias/backbone-min.js"></script>-->
+	<script type="text/javascript" src="joint_0.9.6/joint.js"></script>
+	<script type="text/javascript" src="bower_components/ng-contextmenu/module/ngContextMenu.js"></script>
 <!--<footer>
 	<p>footer</p>
 </footer>-->
+
+	<div id="miDiagrama" layout="column" layout-align="top center" ng-controller="DiagramaController" >	
+		{{rect1json | json}}
+		<br>
+		{{rect2json | json}}
+	</div>
+
 </html>
