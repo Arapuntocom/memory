@@ -124,16 +124,16 @@
 				</md-list>	
 			</section>
 			
-		  	<section layout="row" flex>
+		  	<section layout="column" >
 
-				<md-content flex layout ng-init="blocked = false" >					
+				<md-content layout="column" ng-init="blocked = false" >					
 						<!--<p>
 						<div id="miDiagrama"></div>
 							(Área de dibujo)
 						</p>-->
 
 						
-						<!--<div>
+						<div>
 							<md-button ng-click="toggleTree()" ng-hide="isOpenRight('tree')" class="md-primary" >
 								Mapa del proyecto
 							</md-button>
@@ -162,15 +162,15 @@
 								Condicional
 							</md-button>
 						</div>
--->
+
 
 <!-- div área de dibujo -->
 
-					<div id="miDiagrama" layout="column" layout-align="top center" ng-controller="DiagramaController" >	
+					<!--<div id="miDiagrama" layout="column" layout-align="top center" ng-controller="DiagramaController" >	
 						{{rect1json | json}}
 						<br>
 						{{rect2json | json}}
-					</div>
+					</div>-->
 
 
 

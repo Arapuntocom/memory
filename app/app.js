@@ -7,7 +7,8 @@ angular.module('myApp', [
   'header',
   'draw',
   'draw.tree',
-  'myApp.version'
+  'myApp.version',
+  'dibujo'
 ])
 
 .config(['$locationProvider', '$routeProvider', '$stateProvider', '$urlRouterProvider', function($locationProvider, $routeProvider, $stateProvider, $urlRouterProvider) {
@@ -22,9 +23,20 @@ angular.module('myApp', [
 
   .state('draw', {
     url: '/draw',   
-    templateUrl: 'view/draw.html',
-    controller: 'DrawController'
-  });
+    templateUrl: 'view/draw.html'
+  })
+
+  .state('dibujo', {
+    url: '/dibujo',
+    templateUrl: 'view/dibujo.html',
+    controller: 'DibujoController'
+  })
+
+  .state('test', {
+    url: '/test',
+    templateUrl: 'view/test.html',
+    controller: 'DibujoController'
+  });;
 
 
  // $routeProvider.otherwise({redirectTo: '/'});
